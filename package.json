@@ -4,13 +4,14 @@
   "description": "mirror of msw, bundled and exposed as ES module",
   "author": "Pascal Schilp <pascalschilp@gmail.com>",
   "main": "index.js",
+  "type": "module",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
     "@web/dev-server": "^0.1.35",
     "msw": "^1.1.0",
-    "rollup": "^2.36.1"
+    "rollup": "^3.17.3"
   },
   "scripts": {
     "start": "wds",
