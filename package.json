@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "mirror of msw, bundled and exposed as ES module",
   "author": "Pascal Schilp <pascalschilp@gmail.com>",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "type": "module",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
@@ -15,10 +15,10 @@
   },
   "scripts": {
     "start": "wds",
-    "build": "msw init ./ --save=false&& mv mockServiceWorker.js sw.js && rollup -c ./rollup.config.js"
+    "build": "rollup -c ./rollup.config.js",
+    "postbuild": "msw init ./ --save=false&& mv mockServiceWorker.js ./dist/sw.js"
   },
   "files": [
-    "index.js",
-    "sw.js"
+    "./dist/"
   ]
 }
